@@ -1,0 +1,106 @@
+.individual {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 243, 243);
+}
+
+.individual-container-1 {
+    padding-top: 2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+}
+
+.individual-container-1 h1 {
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.individual-container-1 img {
+    width: 45%;
+    height: auto;
+
+}
+
+.individual-container-2 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.individual-container-2-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.individual-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 15vh;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 20px;
+}
+
+.individual-box p {
+    color: gray;
+
+}
+
+.individual-container-3 {
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 20px;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+}
+
+.individual-container-3 span {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.individual-container-3 span h2 {
+    font-weight: lighter;
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.individual-container-3 button {
+    margin-right: 1rem;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    height: 60px;
+}
+
+.individual-container-3 button {
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+}
+
+.individual-container-3 button:hover {
+    background-color: #006666;
+}

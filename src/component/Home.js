@@ -1,17 +1,15 @@
 import React from 'react'
 import carimage from "../assests/car.png"
 import "../css/Home.css";
-import Header from './Header';
 import Steps from './Steps';
 import Demo from './Demo';
 import Caroptions from './Caroptions';
 import CustomerSay from './CustomerSay';
-import Footer from "../component/Footer"
 import GettingStarted from './GettingStarted';
 
 const Home = () => {
     return (
-        <><Header />
+        <>
             <div className='home-page'>
                 <div className='home-left'>
                     <span><h1>Looking to</h1></span>
@@ -33,7 +31,7 @@ const Home = () => {
                                 <label for="return-date">Return Date:</label>
                                 <input type="date" id="return-date" name="return-date" required />
                             </div>
-                            <button type="submit">Submit</button>
+                            <button type="submit">Book Now</button>
                         </form>
 
                     </div>
@@ -47,7 +45,6 @@ const Home = () => {
             <Caroptions />
             <CustomerSay />
             <GettingStarted />
-            <Footer />
         </>
     )
 }
