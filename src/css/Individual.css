@@ -25,9 +25,9 @@
 }
 
 .individual-container-1 img {
-    width: 45%;
-    height: auto;
-
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .individual-container-2 {

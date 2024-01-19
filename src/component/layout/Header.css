@@ -48,6 +48,14 @@
     align-items: center;
 }
 
+.right-1 {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .right button {
     width: 5rem;
     height: 3rem;
@@ -58,6 +66,40 @@
 }
 
 .right button:hover {
+    color: rgb(102, 101, 101);
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+}
+
+.right-profile button {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border: 1px solid gray;
+    color: rgb(102, 101, 101);
+    border-radius: 50%;
+}
+
+.right-profile button:hover {
+    color: rgb(102, 101, 101);
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+}
+
+.right-profile-2 button {
+    width: 5rem;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    color: rgb(102, 101, 101);
+    border-radius: 30px;
+}
+
+.right-profile-2 button:hover {
     color: rgb(102, 101, 101);
     background: linear-gradient(to top left, #800000, #ff5733);
     -webkit-background-clip: text;

@@ -42,23 +42,23 @@
     /* border: 2px solid black; */
 }
 
-.reservation-form {
+.home-reservation-form {
     display: flex;
     flex-direction: row;
 }
 
-.form-group {
+.home-form-group {
     margin-right: 20px;
 }
 
-label {
+.home-form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input,
-.reservation-form button {
+.home-form-group input,
+.home-reservation-form button {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -66,13 +66,13 @@ input,
     width: 200px;
 }
 
-.reservation-form button {
+.home-reservation-form button {
     background-color: #008080;
     color: white;
     cursor: pointer;
 }
 
-.reservation-form button:hover {
+.home-reservation-form button:hover {
     background-color: #006666;
 }
 

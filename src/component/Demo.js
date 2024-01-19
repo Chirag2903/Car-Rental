@@ -1,34 +1,26 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../css/Demo.css";
-import image1 from "../assests/Car1.png";
-import image2 from "../assests/Car2.png";
-import image3 from "../assests/Car3.png";
+import { useSelector } from 'react-redux';
 
 
 const Demo = () => {
     const [selectedOption, setSelectedOption] = useState('popular');
     const [caroption, setcaroption] = useState({});
 
-    const popularCars = useMemo(() => [
-        { id: 1, name: 'Jaguar M6', img: image3, desc: "Four Seater Car", price: 1000 },
-        { id: 2, name: 'Mercedes Benz SQ', img: image2, desc: "Four Seater Car", price: 1000 },
-        { id: 3, name: 'Audi 2019 A4 Allroad', img: image1, desc: "Four Seater Car", price: 1000 }
-    ], []);
+    const { products } = useSelector((state) => state.products);
+    const popularCars = products.slice(3, 6);
+    const recentCars = products.slice(6, 9);
 
-    const recentCars = useMemo(() => [
-        { id: 4, name: 'Audi 2019 A4 Allroad', img: image1, desc: "Four Seater Car", price: 1000 },
-        { id: 5, name: 'Mercedes Benz SQ', img: image2, desc: "Four Seater Car", price: 1000 },
-        { id: 6, name: 'Jaguar M6', img: image3, desc: "Four Seater Car", price: 1000 }
-    ], []);
+
 
     useEffect(() => {
-        if (popularCars.length > 0 && !caroption.id && selectedOption === 'popular') {
+        if (popularCars.length > 0 && !caroption._id && selectedOption === 'popular') {
             setcaroption(popularCars[0]);
         }
-        else if (recentCars.length > 0 && !caroption.id && selectedOption === 'recent') {
+        else if (recentCars.length > 0 && !caroption._id && selectedOption === 'recent') {
             setcaroption(recentCars[0]);
         }
-    }, [popularCars, caroption, recentCars, selectedOption]);
+    }, [popularCars, caroption._id, recentCars, selectedOption]);
 
     const handleOptionChange = (option) => {
         setSelectedOption(option);
@@ -40,10 +32,10 @@ const Demo = () => {
     };
 
     return (
-        <div className='demo'>
+        <div id="ride" className='demo'>
             <div className='demo-left'>
-                {caroption &&
-                    <img src={caroption.img} alt='car' />
+                {caroption && caroption.images && caroption.images.length > 0 &&
+                    <img src={caroption.images[0].url} alt='car' />
                 }
             </div>
             <div className='demo-right'>
@@ -70,14 +62,14 @@ const Demo = () => {
                     {selectedOption === 'popular' ? (
                         <>
                             {popularCars.map((car) => (
-                                <DemoCard key={car.id} car={car} handlecar={() => handleCarOption(car)} caroption={caroption} />
+                                <DemoCard key={car._id} car={car} handlecar={() => handleCarOption(car)} caroption={caroption} />
                             ))}
                         </>
 
                     ) : (
                         <>
                             {recentCars.map((car) => (
-                                < DemoCard key={car.id} car={car} handlecar={() => handleCarOption(car)} caroption={caroption} />
+                                < DemoCard key={car._id} car={car} handlecar={() => handleCarOption(car)} caroption={caroption} />
                             ))}
                         </>
                     )}
@@ -89,13 +81,13 @@ const Demo = () => {
 
 const DemoCard = ({ car, handlecar, caroption }) => {
     return (
-        <button className='democard' onMouseEnter={handlecar} style={{ boxShadow: caroption.id === car.id ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : '' }}>
+        <button className='democard' onMouseEnter={handlecar} style={{ boxShadow: caroption._id === car._id ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : '' }}>
             <div className='democard-1'>
-                <img src={car.img} alt='car' />
+                <img src={car.images[0].url} alt='car' />
             </div>
             <div className='democard-2'>
                 <h3>{car.name}</h3>
-                <p>{car.desc}</p>
+                <p>{car.description}</p>
                 <h2>Rs{car.price}/day</h2>
             </div>
         </button>

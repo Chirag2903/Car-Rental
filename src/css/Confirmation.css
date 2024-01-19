@@ -1,0 +1,269 @@
+.confirmation {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    padding-top: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-heading {
+    width: 80%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.confirmation-heading h1 {
+    font-weight: lighter;
+    width: fit-content;
+    border-bottom: 1px solid brown;
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.confirmation-container-1 h1 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    width: fit-content;
+    border-bottom: 1px solid brown;
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.confirmation-container-1 {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-detail-page {
+    width: 100%;
+    height: 12%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-detail-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.confirmation-page {
+    width: 100%;
+    height: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.confirmation-group {
+    margin-right: 20px;
+}
+
+.confirmation label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.confirmation h2 {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.confirmation-container-2 {
+    width: 30%;
+    height: 90%;
+}
+
+.confirmation-extra-page {
+    width: 100%;
+    height: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-extra-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.confirmation-extra-group {
+    width: 100%;
+    height: 15vh;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid gray;
+}
+
+.confirmation-extra-group-1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.confirmation-extra-group-1 input {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+
+.confirmation-extra-group-1 label {
+    margin-bottom: 0px;
+}
+
+.confirmation-last {
+    width: 100%;
+    height: 25%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.confirmation-container-2 {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(255, 243, 243);
+    border-radius: 20px;
+}
+
+.confirmation-container-2 img {
+    width: 50vw;
+    height: 30vh;
+    object-fit: contain;
+}
+
+.confirmation-container-2-box {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0rem 1rem 0 1rem;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.confirmation-container-2-box h2,
+.confirmation-container-2-box h3 {
+    font-weight: lighter;
+}
+
+.confirmation-container-2-box h2 {
+    font-size: 1.9rem;
+}
+
+.confirmation-container-2 h1 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    width: fit-content;
+    border-bottom: 1px solid brown;
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.confirmation-container-2-box-2 {
+    width: 80%;
+    height: 80%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.3rem;
+    background-color: rgb(255, 243, 243);
+
+}
+
+.subtotal-calculator {
+    width: 100%;
+    height: 20%;
+    /* background-color: #dfaeae; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1px solid gray;
+    font-weight: lighter;
+    /* margin: 0 0.2rem 0 0.2rem; */
+}
+
+.subtotal-calculator-total {
+    width: 100%;
+    height: 50%;
+    /* background-color: #dfaeae; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1px solid gray;
+    font-weight: lighter;
+    margin-top: 1rem;
+
+}
+
+.confirmation-container-2-box button {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 0.5rem;
+}
+
+.confirmation-container-2-box button {
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+}
+
+.confirmation-container-2-box button:hover {
+    background-color: #006666;
+}
+
+.NoExtra {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NoExtra p {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: lightgray;
+}

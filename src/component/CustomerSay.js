@@ -3,7 +3,7 @@ import "../css/CustomerSay.css"
 
 const CustomerSay = () => {
     return (
-        <div className='customersay'>
+        <div id="customersay" className='customersay'>
             <h1>What Our Customer<span> Say</span></h1>
             <h3>Testimonals</h3>
             <div className='customersay-1'>
@@ -12,7 +12,7 @@ const CustomerSay = () => {
                         <img src="https://parrotprint.com/wp/wp-content/uploads/2017/04/pexels-photo-27411.jpg" alt='profile' />
                     </div>
                     <div className='customersay-container-1'>
-                        <p>"I've Been A Loyal Customer Of CS Rental For Years And They Never Disappoint. I Appreciate The Reliability And Professionalism Of The Car Rental Service."</p>
+                        <p>"CS Rental has consistently exceeded my expectations over the years. Their commitment to reliability and professionalism sets them apart."</p>
                     </div>
                     <div className='customersay-container-2'>
                         <div className='customersay-container-2-1'>
@@ -44,7 +44,7 @@ const CustomerSay = () => {
                         <img src="https://qph.cf2.quoracdn.net/main-qimg-5eb631ae6f587af2631f6d3348047693.webp" alt='profile' />
                     </div>
                     <div className='customersay-container-1'>
-                        <p>"I've Been A Loyal Customer Of CS Rental For Years And They Never Disappoint. I Appreciate The Reliability And Professionalism Of The Car Rental Service."</p>
+                        <p>"Having been a dedicated customer of CS Rental for an extended period, I can confidently say that their service never fails to impress.</p>
                     </div>
                     <div className='customersay-container-2'>
                         <div className='customersay-container-2-1'>

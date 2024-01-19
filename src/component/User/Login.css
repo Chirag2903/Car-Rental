@@ -9,7 +9,7 @@
 
 .login-container::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 35vw;
@@ -27,7 +27,7 @@
     content: "";
     top: 0;
     right: 0;
-    position: fixed;
+    position: absolute;
     width: 35vw;
     height: 100%;
     background-image: url('https://static.vecteezy.com/system/resources/previews/012/001/342/original/car-rental-booking-reservation-and-sharing-using-service-mobile-application-with-route-or-points-location-in-hand-drawn-cartoon-flat-illustration-vector.jpg');

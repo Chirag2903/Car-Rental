@@ -103,8 +103,8 @@ input {
 }
 
 .extra-group-1 {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 500%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -177,6 +177,8 @@ input {
 .booking-container-2-box h2,
 .booking-container-2-box h3 {
     border-bottom: 1px solid gray;
+    font-weight: lighter;
+
 }
 
 .booking-container-2-box h2 {
