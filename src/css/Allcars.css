@@ -124,7 +124,6 @@
     .allcars-container {
         width: 90%;
         height: 75%;
-        background-color: #ff5733;
     }
 
     .allcarscard {
@@ -135,7 +134,6 @@
 
 
     .allcars-1 {
-        background-color: aqua;
         width: 100%;
         height: 65%;
     }
@@ -143,7 +141,6 @@
     .allcars-2 {
         width: 100%;
         height: 60%;
-        background-color: aquamarine;
     }
 
     .allcars-2 h3 {
