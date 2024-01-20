@@ -107,3 +107,61 @@
     transform: scale(1.1);
     transition: 0.3s ease-out;
 }
+
+@media screen and (max-width:600px) {
+    .allcars {
+        height: 150vh;
+    }
+
+    .allcars h1 {
+        font-size: 1.1rem;
+    }
+
+    .allcars span h3 {
+        font-size: 0.7rem;
+    }
+
+    .allcars-container {
+        width: 90%;
+        height: 75%;
+        background-color: #ff5733;
+    }
+
+    .allcarscard {
+        width: 42%;
+        height: 30%;
+        margin: 0.8rem;
+    }
+
+
+    .allcars-1 {
+        background-color: aqua;
+        width: 100%;
+        height: 65%;
+    }
+
+    .allcars-2 {
+        width: 100%;
+        height: 60%;
+        background-color: aquamarine;
+    }
+
+    .allcars-2 h3 {
+        font-size: 0.8rem;
+    }
+
+    .allcars-2 p {
+        font-size: 0.6rem;
+    }
+
+    .allcars-2 h2 {
+        font-size: 0.8rem;
+    }
+
+    .allcars-button {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.1rem;
+    }
+
+}

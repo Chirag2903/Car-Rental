@@ -109,3 +109,34 @@
     color: white;
     background-color: #006666;
 }
+
+@media screen and (max-width:600px) {
+    .login-container {
+        height: 90vh;
+    }
+
+    .login-container::before {
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+
+    .login-container::after {
+        z-index: -2;
+        opacity: 0.2;
+    }
+
+    .login-form {
+        max-width: 200px;
+    }
+
+
+    .login-form button {
+        font-size: 0.7srem;
+        width: 100%;
+        padding: 8px;
+
+    }
+
+
+}

@@ -147,4 +147,18 @@
         font-size: 8px;
         border-radius: 10px;
     }
+
+    .right {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right button {
+        width: 45px;
+        height: 25px;
+        font-size: 8px;
+    }
 }
