@@ -24,7 +24,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .caroptioncard {
@@ -98,4 +97,59 @@
 .caroptions-button:hover {
     transform: scale(1.1);
     transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+    .caroptions {
+        height: 45vh;
+    }
+
+    .caroptions h1 {
+        font-size: 1.3rem;
+    }
+
+    .caroptions span h3 {
+        font-size: 0.8rem;
+    }
+
+    .caroptions-container {
+        width: 95%;
+        height: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .caroptioncard {
+        width: 30%;
+        height: 70%;
+        margin: 0.5rem;
+    }
+
+    .caroption-1 {
+        width: 80%;
+        height: 50%;
+    }
+
+    .caroption-2 h3 {
+        font-size: 0.5rem;
+    }
+
+    .caroption-2 p {
+        font-size: 0.5rem;
+    }
+
+    .caroption-2 h2 {
+        font-size: 0.5rem;
+    }
+
+    .caroptions-button {
+        width: 5rem;
+        height: 1rem;
+        font-size: 0.5rem;
+        transform: translateY(-1rem);
+    }
+
+
 }

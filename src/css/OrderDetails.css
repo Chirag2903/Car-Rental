@@ -267,3 +267,96 @@
     font-weight: lighter;
     color: lightgray;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .orderdetails {
+        width: 100%;
+        height: 200vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0.5rem;
+    }
+
+    .orderdetails-heading {
+        height: 5%;
+    }
+
+    .orderdetails h1 {
+        font-size: 1.2rem;
+    }
+
+    .orderdetails-container-1 {
+        width: 95%;
+        height: 70%;
+    }
+
+    .orderdetails-detail-page {
+        width: 100%;
+        height: 12%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .orderdetails label {
+        font-size: 0.6rem;
+    }
+
+    .orderdetails h2 {
+        padding: 8px;
+        font-size: 8px;
+        width: 130px;
+        height: 5px;
+    }
+
+    .orderdetails-extra-page {
+        width: 100%;
+        height: 30%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .orderdetails-extra-group p {
+        font-size: 0.6rem;
+        margin-bottom: 0.1rem;
+    }
+
+
+    .orderdetails-last {
+        height: 20%;
+    }
+
+    .orderdetails-container-2 {
+        width: 95%;
+        height: 30%;
+        order: 1;
+    }
+
+    .orderdetails-container-2 img {
+        width: 60vw;
+        height: 30vh;
+        object-fit: contain;
+    }
+
+    .orderdetails-container-2-box {
+        width: 90%;
+        height: 30%;
+        justify-content: space-evenly;
+        padding: 0rem 1rem 0 1rem;
+    }
+
+    .orderdetails-container-2-box h2,
+    .orderdetails-container-2-box h3 {
+        font-size: 0.7rem;
+    }
+
+    .orderdetails-container-2-box h2 {
+        font-size: 1rem;
+    }
+
+    .NoExtra-orderdetails p {
+        font-size: 1rem;
+    }
+
+}

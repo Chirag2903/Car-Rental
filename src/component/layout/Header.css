@@ -106,3 +106,45 @@
     color: transparent;
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 600px) {
+
+    .left {
+        width: 15%;
+        height: 100%;
+    }
+
+    .left img {
+        width: 50%;
+        height: 40%;
+    }
+
+    .mid {
+        font-size: 10px;
+    }
+
+    .mid a {
+        margin: 7px;
+    }
+
+    .right-profile button {
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-profile button img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .right-profile-2 button {
+        width: 35px;
+        height: 25px;
+        font-size: 8px;
+        border-radius: 10px;
+    }
+}

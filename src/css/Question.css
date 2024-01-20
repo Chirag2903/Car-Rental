@@ -34,5 +34,34 @@
 
 .question p {
     color: gray;
+    padding-bottom: 1rem;
+
+}
+
+@media screen and (max-width: 600px) {
+    .question {
+        width: 90%;
+        padding: 0 0.5rem 0 0.5rem;
+        border-radius: 8px;
+    }
+
+    .question-header {
+        height: 9vh;
+    }
+
+    .question-header h3 {
+        font-size: 0.7rem;
+    }
+
+    .question p {
+        font-size: 0.6rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .question-header button {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.4rem;
+    }
 
 }

@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <footer id="footer">
+        <footer className="footer">
             <div className="leftfooter">
                 <h4><img width="40" height="40" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new" />Contact Me</h4>
                 <a href='mailto:chiragshukla135@gmail.com'><p>chiragshukla135@gmail.com</p></a>

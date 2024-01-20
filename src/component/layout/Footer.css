@@ -1,5 +1,4 @@
-footer {
-    /* margin-top: 3vmax; */
+.footer {
     padding: 2vmax 2vmax 0vmax 2vmax;
     background-color: rgb(25, 25, 25);
     color: white;
@@ -89,4 +88,38 @@ footer {
     background: linear-gradient(to top left, #800000, #ff5733);
     -webkit-background-clip: text;
     color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .leftfooter h4 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .leftfooter>a {
+        font-size: 1vmax;
+    }
+
+    .midfooter>h1 {
+        font-size: 2vmax;
+    }
+
+    .midfooter>p {
+        font-size: 0.4rem;
+    }
+
+
+    .rightfooter>h4 {
+        font-size: 1vmax;
+    }
+
+
+    .rightfooter a img {
+        width: 20px;
+        height: 20px;
+    }
+
+
 }

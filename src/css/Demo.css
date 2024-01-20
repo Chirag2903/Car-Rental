@@ -94,3 +94,62 @@
 .democard-2 h2 {
     font-weight: 100;
 }
+
+@media screen and (max-width: 600px) {
+    .demo {
+        height: 45vh;
+    }
+
+    .demo-left {
+        width: 40%;
+        height: 40%;
+        transform: translate(0rem, 3rem);
+    }
+
+    .demo-left img {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .demo-right {
+        height: 80%;
+    }
+
+    .demo-right-container-1 {
+        width: 100%;
+        height: 5vh;
+        margin-left: 0rem;
+    }
+
+    .demo-right-container-1 button {
+        width: 4.5rem;
+        height: 100%;
+        font-size: 0.4rem;
+        border: none;
+    }
+
+
+    .democard {
+        width: 100%;
+        height: 8vh;
+        border-radius: 10px;
+    }
+
+    .democard-2 {
+        width: 65%;
+        height: 90%;
+    }
+
+    .democard-2 h3 {
+        font-size: 0.4rem;
+    }
+
+    .democard-2 p {
+        font-size: 0.35rem;
+    }
+
+    .democard-2 h2 {
+        font-size: 0.5rem;
+    }
+}
