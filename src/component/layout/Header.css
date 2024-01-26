@@ -120,7 +120,8 @@
     }
 
     .mid {
-        font-size: 10px;
+        width: 70%;
+        font-size: 8px;
     }
 
     .mid a {

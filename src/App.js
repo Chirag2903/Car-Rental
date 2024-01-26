@@ -20,6 +20,7 @@ import axios from 'axios';
 import { loadStripe } from '@stripe/stripe-js';
 import NotFound from "./component/layout/NotFound.js"
 import OrderDetails from "./component/OrderDetails.js"
+import Predict from "./component/Predict.js"
 
 function App() {
 
@@ -52,6 +53,8 @@ function App() {
         <Route path='/success' element={<ProtectedRoute Component={Successful} />} />
         <Route path='/account' element={<ProtectedRoute Component={Profile} />} />
         <Route path='/order/:id' element={<ProtectedRoute Component={OrderDetails} />} />
+        <Route path='/predict' element={<Predict />} />
+
 
         {
           stripeApiKey && (

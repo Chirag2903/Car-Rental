@@ -25,6 +25,7 @@ const Header = () => {
                 <HashLink to="/#services">Services</HashLink>
                 <HashLink to='/#customersay'>Reviews</HashLink>
                 <HashLink to="/#gettingstarted">Help</HashLink>
+                <Link to="/predict">CarPredict</Link>
             </div>
             {
                 isauthenticated ? (

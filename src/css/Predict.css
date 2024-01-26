@@ -1,0 +1,143 @@
+.predict {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 243, 243);
+}
+
+.predict-container {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.container-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-header h1 {
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container-header h3 {
+    color: gray;
+}
+
+.container-body {
+    width: 100%;
+    height: 80%;
+}
+
+.body-form {
+    width: 100%;
+    height: 80%;
+}
+
+.predict-form-group {
+    width: 90%;
+    height: fit-content;
+    margin: 1rem;
+}
+
+.predict-form-group label {
+    font-size: 1.2rem;
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.predict-form-group select {
+    width: 100%;
+    height: 12%;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.predict-form-group input {
+    width: 98%;
+    height: 12%;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.predict-form-group button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+    transform: translate(30rem, 0);
+}
+
+.predict-form-group button:hover {
+    background-color: #006666;
+}
+
+.predict-output {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.predict-output h1 {
+    background: linear-gradient(to top left, #800000, #ff5733);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container-header h3 {
+        font-size: 0.8rem;
+
+    }
+
+    .predict-form-group button {
+        width: 150px;
+        font-size: 14px;
+        transform: translate(4rem, 0);
+    }
+
+
+    .predict-form-group label {
+        font-size: 1rem;
+    }
+
+    .predict-form-group select {
+        font-size: 1rem;
+    }
+
+    .predict-form-group input {
+        font-size: 0.8rem;
+    }
+
+    .predict-output h1 {
+        font-size: 1rem;
+    }
+
+    .predict-output {
+        align-items: center;
+    }
+
+}
