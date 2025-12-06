@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { CardNumberElement, CardCvcElement, CardExpiryElement, useStripe, useElements, } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { createorder, clearerrors } from "../action/orderaction";
 import "../css/Payment.css"
+import Loader from "./layout/Loader";
 
 const Payment = () => {
 
@@ -21,8 +22,9 @@ const Payment = () => {
     const { user } = useSelector((state) => state.user);
     const { error } = useSelector((state) => state.neworder);
 
+    const [loading, setLoading] = useState(false);
     const paymentData = {
-        name: user.name,
+        name: user.username,
         email: user.email,
         amount: Math.round(orderData.totalprice * 100),
         address1: orderData.userDetails.address1,
@@ -37,7 +39,7 @@ const Payment = () => {
         e.preventDefault();
 
         payBtn.current.disabled = true;
-
+        setLoading(true);
         try {
             const config = {
                 headers: {
@@ -54,7 +56,7 @@ const Payment = () => {
                 payment_method: {
                     card: elements.getElement(CardNumberElement),
                     billing_details: {
-                        name: user.name,
+                        name: user.username,
                         email: user.email,
                         address: {
                             line1: orderData.userDetails.address1,
@@ -68,6 +70,7 @@ const Payment = () => {
             });
 
             if (result.error) {
+                setLoading(false);
                 payBtn.current.disabled = false;
 
                 alert(result.error.message);
@@ -79,10 +82,12 @@ const Payment = () => {
                     navigate("/success");
                 }
                 else {
+                    setLoading(false);
                     alert("There's some issue while processing payment ");
                 }
             }
         } catch (error) {
+            setLoading(false);
             payBtn.current.disabled = false;
             alert(error.response.data.message);
         }
@@ -118,8 +123,14 @@ const Payment = () => {
                     value={`Pay - ₹${orderData && orderData.totalprice}`}
                     ref={payBtn}
                     className="paymentFormBtn"
+                    disabled={loading}
                 />
             </form>
+            {loading && (
+                <div className="loaderOverlay">
+                    <Loader />
+                </div>
+            )}
         </div>
 
     )

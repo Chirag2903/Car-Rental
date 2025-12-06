@@ -22,6 +22,8 @@ import NotFound from "./component/layout/NotFound.js"
 import OrderDetails from "./component/OrderDetails.js"
 import Predict from "./component/Predict.js"
 import Loader from './component/layout/Loader.js';
+import Error from './component/layout/Error.js';
+import ScrollToTop from './component/layout/ScrollToTop.js';
 
 function App() {
 
@@ -43,7 +45,7 @@ function App() {
   useEffect(() => {
     store.dispatch(loaduser());
     getstripeapikey();
-  }, []);
+  }, [stripeApiKey]);
 
   const PaymentWrapper = () => {
     if (isLoadingStripe) {
@@ -61,6 +63,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -74,6 +77,7 @@ function App() {
         <Route path='/order/:id' element={<ProtectedRoute Component={OrderDetails} />} />
         <Route path='/predict' element={<Predict />} />
         <Route path="/payment" element={<ProtectedRoute Component={PaymentWrapper} />} />
+        <Route path='/error' element={<Error />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
