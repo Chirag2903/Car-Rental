@@ -9,6 +9,7 @@ exports.processPayment = catchasyncerror(async (req, res, next) => {
         metadata: {
             company: "CarRental",
         },
+        description: `Car rental payment from ${req.body.name} (${req.body.email})`
     });
 
     res.status(200).json({ success: true, client_secret: myPayment.client_secret });
