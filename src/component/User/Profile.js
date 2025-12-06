@@ -48,7 +48,7 @@ const Profile = () => {
                             </div>
                             <div className="profile-right-cards">
                                 {orders && orders.length > 0 ? (
-                                    orders.map((item, index) => (
+                                    orders.slice().reverse().map((item, index) => (
                                         <Link to={`/order/${item._id}`}>
                                             <div key={index} className='profile-right-card'>
                                                 <div className='profile-card-1'>
