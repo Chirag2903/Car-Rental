@@ -26,6 +26,7 @@ import Loader from './component/layout/Loader.js';
 function App() {
 
   const [stripeApiKey, setstripeApiKey] = useState("");
+  const [isLoadingStripe, setIsLoadingStripe] = useState(true);
 
   async function getstripeapikey() {
 
@@ -34,6 +35,8 @@ function App() {
       setstripeApiKey(data.stripeApiKey);
     } catch (error) {
       console.error('Error fetching Stripe API key:', error);
+    } finally {
+      setIsLoadingStripe(false);
     }
   }
 
@@ -41,6 +44,21 @@ function App() {
     store.dispatch(loaduser());
     getstripeapikey();
   }, []);
+
+  const PaymentWrapper = () => {
+    if (isLoadingStripe) {
+      return <Loader />;
+    }
+    if (!stripeApiKey) {
+      return <div>Error loading payment. Please try again.</div>;
+    }
+    return (
+      <Elements stripe={loadStripe(stripeApiKey)}>
+        <Payment />
+      </Elements>
+    );
+  };
+
   return (
     <Router>
       <Header />
@@ -55,23 +73,7 @@ function App() {
         <Route path='/account' element={<ProtectedRoute Component={Profile} />} />
         <Route path='/order/:id' element={<ProtectedRoute Component={OrderDetails} />} />
         <Route path='/predict' element={<Predict />} />
-
-        <Route
-          path="/payment"
-          element={
-            <ProtectedRoute
-              Component={() =>
-                stripeApiKey ? (
-                  <Elements stripe={loadStripe(stripeApiKey)}>
-                    <Payment />
-                  </Elements>
-                ) : (
-                  <Loader />
-                )
-              }
-            />
-          }
-        />
+        <Route path="/payment" element={<ProtectedRoute Component={PaymentWrapper} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
