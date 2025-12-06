@@ -21,6 +21,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import NotFound from "./component/layout/NotFound.js"
 import OrderDetails from "./component/OrderDetails.js"
 import Predict from "./component/Predict.js"
+import Loader from './component/layout/Loader.js';
 
 function App() {
 
@@ -55,12 +56,22 @@ function App() {
         <Route path='/order/:id' element={<ProtectedRoute Component={OrderDetails} />} />
         <Route path='/predict' element={<Predict />} />
 
-
-        {
-          stripeApiKey && (
-            <Route path="/payment" element={<Elements stripe={loadStripe(stripeApiKey)}><ProtectedRoute Component={Payment} /></Elements>} />
-          )
-        }
+        <Route
+          path="/payment"
+          element={
+            <ProtectedRoute
+              Component={() =>
+                stripeApiKey ? (
+                  <Elements stripe={loadStripe(stripeApiKey)}>
+                    <Payment />
+                  </Elements>
+                ) : (
+                  <Loader />
+                )
+              }
+            />
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
