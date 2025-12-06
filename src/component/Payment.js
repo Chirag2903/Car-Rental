@@ -25,6 +25,11 @@ const Payment = () => {
         name: user.name,
         email: user.email,
         amount: Math.round(orderData.totalprice * 100),
+        address1: orderData.userDetails.address1,
+        city: orderData.userDetails.city,
+        state: orderData.userDetails.address2,
+        postal_code: "400001",
+        phone: user.phone || ""
     };
 
 
